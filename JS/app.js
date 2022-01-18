@@ -22,6 +22,8 @@ const app = {
                 // 取出 token, expired
                 const { token, expired } = res.data;
                 document.cookie = `gillToken=${token}; expires=${new Date(expired)}; path=/`;
+
+                // 同網域頁面跳轉
                 window.location = "products.html";
             })
             .catch((err) => {
