@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>W2 - 後台登入頁面</title>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css">
+    <!-- login.css -->
+    <link rel="stylesheet" href="./src/style/all.css">
+</head>
+
+<body>
+    <div id="app" class="app">
+        <div class="container">
+            <div class="row justify-content-center">
+                <h1 class="h3 mb-3 font-weight-normal">
+                    請先登入
+                </h1>
+                <div class="col-8">
+                    <form id="form" class="form-signin">
+                        <div class="form-floating mb-3">
+                            <!-- 使用 v-model 雙向綁定 username, password -->
+                            <input type="email" class="form-control" id="username" placeholder="name@example.com" v-model="user.username"
+                                required autofocus>
+                            <label for="username">Email address</label>
+                        </div>
+                        <div class="form-floating">
+                            <input type="password" class="form-control" id="password" placeholder="Password" v-model="user.password" required>
+                            <label for="password">Password</label>
+                        </div>
+                        <button class="btn btn-lg btn-primary w-100 mt-3" type="button" @click="login">
+                            登入
+                        </button>
+                    </form>
+                </div>
+            </div>
+            <p class="mt-5 mb-3 text-muted">
+                &copy; 2021~∞ - 六角學院
+            </p>
+        </div>
+    </div>
+
+    <!-- Bootstrap -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/js/bootstrap.min.js"></script>
+    <!-- axios -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <!-- login.js -->
+    <script src="./src/js/login.js" type="module"></script>
+</body>
+
+</html>
