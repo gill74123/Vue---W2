@@ -41,8 +41,8 @@
 
                                     <!-- 使用 v-model 雙向綁定 is_enabled 的值，去控制 checkbox -->
                                     <div class="form-check form-switch d-flex align-items-center ps-0">
-                                        <input type="checkbox" class="form-check-input m-0"  role="switch" id="switchCheckbox" v-model="item.is_enabled" :true-value="1" :false-value="0">
-                                        <label for="switchCheckbox" class="form-check-label ms-2" :class="{'text-success': item.is_enabled, 'text-danger': !item.is_enabled}">{{ item.is_enabled ? "啟用" : "未啟用"}}</label>
+                                        <input type="checkbox" class="form-check-input m-0"  role="switch" :id="item.id" v-model="item.is_enabled" :true-value="1" :false-value="0">
+                                        <label :for="item.id" class="form-check-label ms-2" :class="{'text-success': item.is_enabled, 'text-danger': !item.is_enabled}">{{ item.is_enabled ? "啟用" : "未啟用"}}</label>
                                     </div>
                                 </td>
                                 <td width="120">
